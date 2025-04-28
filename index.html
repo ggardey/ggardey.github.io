@@ -1,36 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name — CS Student</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>George Gardey — CS Student & SWE Intern</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --clr-primary: #0a3d62;
+      --clr-secondary: #60a3bc;
+      --clr-accent: #f7b731;
+      --clr-background: #f5f6fa;
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body: 'Raleway', sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font-body);
+      background: var(--clr-background);
+      color: #333;
+      line-height: 1.6;
+    }
+    a { color: var(--clr-primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary));
+      color: #fff;
+      padding: 6rem 2rem;
+      text-align: center;
+      border-radius: 8px;
+      margin-bottom: 3rem;
+    }
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* Sections */
+    section { margin-bottom: 3rem; }
+    section h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+    section h2::after {
+      content: '';
+      height: 3px;
+      width: 50px;
+      background: var(--clr-accent);
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+    }
+    .card h3 {
+      font-family: var(--font-heading);
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
+    .card p { font-size: 0.95rem; margin-bottom: 1rem; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+      padding-top: 2rem;
+      border-top: 1px solid #ddd;
+    }
+    footer a { margin: 0 0.5rem; }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p>Computer Science Student | [Your University]</p>
-  </header>
+  <div class="container">
+    <header class="hero">
+      <h1>George Gardey</h1>
+      <p>CS Student at Notre Dame &middot; Amazon SWE Intern Summer 2025</p>
+      <p style="margin-top:1rem; font-style:italic; font-size:0.9rem; opacity:0.8;">
+        Built in <strong>15 minutes</strong> because my teacher made me.
+      </p>
+    </header>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>One sentence about you.</p>
-  </section>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hey—I’m George, a Notre Dame CS major fascinated by full-stack development, algorithms, and bringing ideas to life with clean code.</p>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/you/project-1">Project 1</a> – short desc</li>
-      <li><a href="https://github.com/you/project-2">Project 2</a> – short desc</li>
-    </ul>
-  </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="card">
+          <h3><a href="https://crosspathsnd.com/">CrossPathsND</a></h3>
+          <p>A matchmaking web app built with React Native &amp; TypeScript. Notre Dame students fill out a survey and get paired using an NLP-driven semantic embedding algorithm. <strong>450+ students</strong> participated.</p>
+        </div>
+        <div class="card">
+          <h3>Chess Engine Bot</h3>
+          <p>Custom chess algorithm implementing evaluation logic and move selection heuristics to compete against human players. Features alpha-beta pruning and positional scoring.</p>
+        </div>
+        <div class="card">
+          <h3>LinkedIn Queens Solver</h3>
+          <p>Automated solver for LinkedIn’s “Queens” puzzle. Uses backtracking algorithm and browser scripting to beat the daily challenge seamlessly.</p>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    <p>
-      <a href="https://github.com/you">GitHub</a> •
-      <a href="https://linkedin.com/in/you">LinkedIn</a> •
-      <a href="mailto:you@domain.com">Email</a>
-    </p>
-  </footer>
+    <footer>
+      <p>
+        <a href="https://linkedin.com/in/georgegardey" target="_blank">LinkedIn</a> •
+        <a href="https://github.com/georgegardey" target="_blank">GitHub</a> •
+        <a href="mailto:ggardey@nd.edu">Email</a>
+      </p>
+    </footer>
+  </div>
 </body>
 </html>
